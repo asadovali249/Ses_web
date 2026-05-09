@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:ital@1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-purple-deep: #3A0E6E;
+  --color-purple-brand: #6B3FA0;
+  --color-purple-medium: #8B5FC7;
+  --color-purple-light: #B892E0;
+  --color-lavender: #D8BFF0;
+  --color-lavender-mist: #EDE0F7;
+  --color-lavender-pale: #F5EBF9;
+  --color-white-warm: #FDFAFF;
+  --color-gold-accent: #D4A844;
+  --color-gold-light: #F5E6C0;
+  --color-text-dark: #1A0A2E;
+  --color-text-muted: #6B5F7A;
+  --color-text-on-purple: #FFFFFF;
+  --color-shield-gradient-start: #C8A2E8;
+  --color-shield-gradient-end: #E8D5F5;
+  --color-danger-red: #D93025;
+  --color-success-green: #34A853;
+  --color-dark-bg: #1A0A2E;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-white-warm);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-gradient-hero {
+    background-image: linear-gradient(160deg, var(--color-lavender-pale) 0%, var(--color-lavender-mist) 30%, var(--color-lavender) 60%, var(--color-purple-light) 100%);
+  }
+  .bg-gradient-cta {
+    background-image: linear-gradient(135deg, var(--color-purple-deep) 0%, var(--color-purple-brand) 50%, var(--color-purple-medium) 100%);
+  }
+  .bg-gradient-glass {
+    background-image: linear-gradient(135deg, rgba(184, 146, 224, 0.08) 0%, rgba(216, 191, 240, 0.12) 100%);
+  }
+  .bg-gradient-dark {
+    background-image: linear-gradient(180deg, var(--color-text-dark) 0%, #2D1454 50%, var(--color-purple-deep) 100%);
+  }
+  .bg-gradient-gold-glow {
+    background-image: radial-gradient(circle, rgba(212, 168, 68, 0.15) 0%, transparent 70%);
+  }
+  .glass-card {
+    background-image: linear-gradient(135deg, rgba(184, 146, 224, 0.08) 0%, rgba(216, 191, 240, 0.12) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(184, 146, 224, 0.2);
+  }
+  .glass-nav {
+    background-color: rgba(253, 250, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(184, 146, 224, 0.15);
+  }
+}
